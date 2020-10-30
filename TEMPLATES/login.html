@@ -1,0 +1,97 @@
+<!-- This login page offers various input field to gather global information like API Keys, 
+    login name or password in advance of starting the demo.-->
+
+    {% extends "masterPage.html" %}
+
+    {% block content %}
+    <div class="row">
+            <!-- Left Rail -->
+            <div class="col-xl-3 col-md-3">
+            </div>
+    
+            <!-- Middle Rail -->
+            <div class="col-xl-6 col-md-6">
+                <div class="section" >
+                    <div class="panel panel--loose panel--raised base-margin-bottom">
+                        <form action="/" method="POST" name="envVars"> 
+                            <div class="section"> 
+                                
+                                <!-- OPTIONAL: Replace with Customer Logo -->
+                                <div class="flex flex-center" style="margin-bottom:20px;">
+                                    <!--<img id="customer-logo" src="{{ url_for('static',filename='IMAGES/CUSTOMIZE: Move picture into IMAGES folder and fill in imagename.type here') }}"></img>-->
+                                    <img id="customer-logo" src="{{ url_for('static', filename='IMAGES/Logo_green.png')}}">
+                                </div>
+                                
+                                <!--OPTIONAL: Info alert e.g. about required preconfigurations-->
+                                <div class="alert alert--info">
+                                    <div class="alert__icon icon-info-outline"></div>
+                                    <div class="alert__message">
+                                        <!--CUSTOMIZE-->
+                                        This demo requires preconfigurations in the Meraki Dashboard. 
+                                        Please, check the demo documentation for more information.
+                                        <!--CUSTOMIZE END-->
+                                    </div>
+                                </div>
+                                 
+                                <!--CUSTOMIZE: Text field section: Add or remove elements as needed.-->
+                                                               
+                                    <!--API KEY Field-->
+                                        <div class="form-group base-margin-bottom">
+                                            <div class="form-group__text">
+                                                <input id="api-key" type="text" required="" onfocus="showOriginalText('Start Demo')">
+                                                <label for="api-key">Meraki API Key*</label>
+                                            </div>
+                                        </div>
+
+                                    <!--Login fields-->
+                                    <!--<div class="form-group base-margin-bottom">
+                                            <div class="form-group__text">
+                                                <input id="login-name" type="text" required="" onfocus="showOriginalText('Start Demo')">
+                                                <label for="login-name">Login Name*</label>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group base-margin-bottom">
+                                            <div class="form-group__text">
+                                                <input id="input-type-password" type="password" value="" required="" onfocus="showOriginalText('Start Demo')">
+                                                <label for="input-type-password">Password*</label>
+                                            </div>
+                                        </div>
+                                    -->
+
+                                    <!--Dropdown Select-->
+                                    <!--<div class="form-group base-margin-bottom">
+                                            <div class="form-group__text select">
+                                                <select id="input-type-select" onfocus="showOriginalText('Start Demo')">
+                                                    <option value="first">First Value</option>
+                                                    <option value="second" selected="">Second Value</option>
+                                                    <option value="third">Third Value</option>
+                                                </select>
+                                                <label for="input-type-select">Basic Select</label>
+                                            </div>
+                                        </div>
+                                    -->
+                                
+                                <!--CUSTOMIZE END-->
+                            
+                                <!-- Button area-->
+                                <input id="login-submit" onclick="showLoadingText()" onload="showOriginalText('Start Demo')" class="btn btn-primary" type="submit" value="Start Demo">
+                                <span class="required-label pull-right">* required fields</span>
+
+                            </div> 
+
+                        </form>
+                        
+                        <!--Alert for error message-->
+                            <!--PASS INFO: Pass the following information to the template: error=True/False ; errormessage="xxx" ; errorcode=xxx-->
+                            {% include "alert.html" %}
+    
+                    </div>
+                </div>
+            </div>
+    
+        <!-- Right Rail -->
+        <div class="col-xl-3 col-md-3">
+        </div>
+    </div>
+    {%  endblock %}

@@ -1,0 +1,68 @@
+
+{% extends "masterPage.html" %}
+
+{% block content %}
+
+    <div class="section">
+        <div class="flex-center-vertical">
+            <h1>Devices to Dial <!--CUSTOMIZE: Add headline page here--></h1>
+
+        </div>
+    </div>
+    <div class="section">
+        <form class = "ey" method="POST" action="{{ url_for('index') }}">
+                <div class="col-md-6 base-margin-bottom">
+                    <div class="form-group dropdown">
+                        <div class="form-group__text select">
+                            <input name="type_select" id="select-state-default" value="{{selectedType}}">
+                            <label for="select-state-default">Device Type</label>
+                        </div>
+                        <div class="dropdown__menu">
+                                <a>All</a>
+                            {% for aType in theTypes %}
+                                <a>{{ aType }}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-default">Filter</button>
+                </div>
+        </form>
+    </div>
+    <div class="section">
+
+
+        <!--CUSTOMIZE: Change table content as needed -->
+        <div class="responsive-table">
+            <table class="table table--lined table--selectable table">
+                <thead>
+                    <tr>
+
+                        <th class="sortable">Name <span class="sort-indicator icon-dropdown"></span></th>
+                        <th>Extension</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                {% for dict in theDevices %}
+                <tr>
+                    <td>
+                            <span>{{ dict.name }}</span>
+                        </td>
+                        <td>
+                            <a href="CISCOTEL:{{ dict.extension }}">{{ dict.extension }}</a>
+                        </td>
+
+                </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+             <!--CUSTOMIZE END-->
+        </div>
+
+    </div>
+
+{%  endblock %}

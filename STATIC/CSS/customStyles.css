@@ -1,0 +1,63 @@
+        
+/*Masterpage*/
+    #footer-link-meraki{
+        height: 15px;
+    }
+    #footer-link-gve-devnet{
+        height: 30px;
+        bottom: 4px;
+        position: relative;
+    }
+    #time_location_note{
+        color: var(--cui-color-gray-500);
+        padding-top: 5px;
+        text-align: center;
+        font-size: var(--cui-font-size-sm);
+    }
+    /*Position footer at bottom. Even with less content.*/
+    .cui .content{
+        min-height: 93vh;
+    }
+    body.cui footer, body.cui .footer{
+        margin-top: 0;
+    }
+    /*Header*/
+    #header-logo{
+        font-size: 23px;
+    }
+
+/*Login*/  
+    .required-label{
+        color: var(--cui-form-label-color);
+    }    
+    #customer-logo{
+        height:55px;
+        margin-bottom: 10px;
+    }
+
+/*Left Menu*/
+.cui .sidebar{
+    padding-top: 30px;
+}
+
+/*Charts from chart.js*/
+.chartjs-render-monitor{
+    background-color: white;
+    padding: 10px;
+}
+
+/*list groups*/
+.list-group{
+    padding-left: 0 !important;
+}
+
+.list-group-item{
+    list-style-type: none;
+}
+
+.list-group-item .btn--link{
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+}
+

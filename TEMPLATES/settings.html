@@ -1,0 +1,71 @@
+<!-- Template page: This settings page offers various input field to gather settings information -->
+
+    {% extends "masterPage.html" %}
+
+    {% block content %}
+    <div class="row">
+            
+            <!-- Left Rail -->
+            <!-- Menu element-->
+            {% include "menu.html" %}
+    
+            <!-- Middle Rail -->
+            <div class="col-9 col-xl-7 col-md-6">
+                <div class="section" >
+                    <div class="panel panel--loose panel--raised base-margin-bottom">
+                        <h2 class="subtitle">Settings</h2>
+                        <hr>
+                        <form action="/" method="POST" name="envVars"> 
+                            <div class="section"> 
+                                                                                                 
+                                <!--CUSTOMIZE: Text field section: Add or remove elements as needed.-->
+                                                               
+                                    <!--Value1 Field-->
+                                        <div class="form-group base-margin-bottom">
+                                            <div class="form-group__text">
+                                                <input id="value1" type="text" required="" onfocus="showOriginalText('Start Demo')">
+                                                <label for="value1">Value1*</label>
+                                            </div>
+                                            <div class="help-block" role="alert">
+                                                <span>Hint for field</span>
+                                            </div>
+                                        </div>
+
+                                    <!--Dropdown Select-->
+                                    <div class="form-group base-margin-bottom">
+                                            <div class="form-group__text select">
+                                                <select id="input-type-select" onfocus="showOriginalText('Start Demo')">
+                                                    <option value="first">First Value</option>
+                                                    <option value="second" selected="">Second Value</option>
+                                                    <option value="third">Third Value</option>
+                                                </select>
+                                                <label for="input-type-select">Basic Select</label>
+                                            </div>
+                                            <div class="help-block" role="alert">
+                                                <span>Hint for field</span>
+                                            </div>
+                                        </div>
+                                
+                                <!--CUSTOMIZE END-->
+                            
+                                <!-- Button area-->
+                                <input id="settings-submit" onclick="showLoadingText()" onload="showOriginalText('Save')" class="btn btn-primary" type="submit" value="Save & Run">
+                                <span class="required-label pull-right">* required fields</span>
+
+                            </div> 
+
+                        </form>
+                        
+                        <!--Alert for error message-->
+                            <!--PASS INFO: Pass the following information to the template: error=True/False ; errormessage="xxx" ; errorcode=xxx-->
+                            {% include "alert.html" %}
+    
+                    </div>
+                </div>
+            </div>
+    
+        <!-- Right Rail -->
+        <div class="col-0 col-xl-3 col-md-3">
+        </div>
+    </div>
+    {%  endblock %}
