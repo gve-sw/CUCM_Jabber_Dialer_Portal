@@ -32,7 +32,7 @@ Collaboration Room and Desk devices such as DX80s can limit the list of devices 
 
 ## Installation
 
-It is recommend to set up your environment as followed, to use this frontend template:
+It is recommended you set up a python environment as follows, assuming you do not use an IDE that does this for you already:
 
 In the CLI:
 1.	Choose a folder, then create and activate a virtual environment for the project
