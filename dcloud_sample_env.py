@@ -5,9 +5,8 @@ needed information about users and environment context to run the sample.  You
 provide this info here once and the scripts in this repository will access it
 as needed.
 
-TODO: To setup your `env_user.py` copy this file then edit and save your info
 
-$ cp env_user.template env_user.py
+$ cp dcloud_sample_env.py env_user.py
 
 
 Copyright (c) 2021 Cisco and/or its affiliates.
@@ -33,9 +32,9 @@ SOFTWARE.
 
 # User Input
 
-WSDL_PATH = ""
-CUCM_LOCATION = ""
-CUCM_USER = ""
-CUCM_PASSWORD = ""
+WSDL_PATH = "/Users/gerardochaves/Documents/VSE local documents/0 Case notes and misc files/02978806 Collab OnPrem Integration Healthcare/CUCM_Jabber_Dialer_Portal/axlsqltoolkit/schema/current/AXLAPI.wsdl"
+CUCM_LOCATION = "198.18.133.3"
+CUCM_USER = "amckenzie"
+CUCM_PASSWORD = "dCloud12345!"
 
 # End User Input

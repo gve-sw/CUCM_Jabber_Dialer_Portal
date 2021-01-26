@@ -1,5 +1,9 @@
 # CUCM Jabber Dialer Portal
 
+| :exclamation:  External repository notice   |
+|:---------------------------|
+| This repository is now mirrored at https://github.com/gve-sw/CUCM_Jabber_Dialer_Portal  Please inform a https://github.com/gve-sw/ organization admin of any changes to mirror them to the external repo |
+
 This sample code can be used to retrieve a list of devices from Cisco Unified Communications Manager using
  the AXL Soap API and a SQL Query to also extract the extension number assigned to each device. 
 The information is then showed in a web page where the extension number is displayed as a link that triggers the Jabber Protocol Handler 
@@ -56,7 +60,7 @@ In the CLI:
     ```
     For Github link: 
         In Github, click on the **Clone or download** button in the upper part of the page > click the **copy icon**
-        
+        ![/IMAGES/giturl.png](/STATIC/IMAGES/giturl.png)
 
 
 5.	Install dependencies
@@ -68,9 +72,8 @@ In the CLI:
 [Cisco Collaboration 12.5 v1 - Transform Work with Collaboration](https://dcloud2-rtp.cisco.com/content/demo/578984?returnPathTitleKey=content-view)
  - Install the AXLSQLToolkit files by going into the CUCM admin page, Go to Application | Plugins. Click on the Download link by the Cisco CallManager AXL SQL Toolkit Plugin. The axlsqltoolkit.zip file contains the complete schema definition for different versions of Cisco Unified CM.
  - Make sure the user being used has a user rank of 1 or with proper API AXL permissions (Role: Standard AXL API Access Reference: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cucm/admin/9_0_1/ccmsys/CUCM_BK_CD2F83FA_00_cucm-system-guide-90/CUCM_BK_CD2F83FA_00_system-guide_chapter_0100.pdf)
- - Copy user_env.template to user_env.py
- - Edit user_env.py and add your CUCM environment and user details WSDL_PATH = "(path to WSDL file)" CUCM_LOCATION = "(IP Address)" CUCM_USER = "(username without domain Example user: amckenzie)" CUCM_PASSWORD = "(password)"
- 
+ - If using the a "Transform Work with Collaboration" dCloud demo instance, copy 'dcloud_sample_env.py' to 'user_env.py'. It contains appropriate values for WSDL_PATH , CUCM_LOCATION , CUCM_USER and CUCM_PASSWORD to use that demo.
+ - Otherwise, copy 'user_env.template' to 'user_env.py' and then edit 'user_env.py' and add your CUCM environment and user details WSDL_PATH = "(path to WSDL file)" CUCM_LOCATION = "(IP Address)" CUCM_USER = "(username without domain Example user: amckenzie)" CUCM_PASSWORD = "(password)"
 
 
 ## Usage
