@@ -1,9 +1,5 @@
 # CUCM Jabber Dialer Portal
 
-| :exclamation:  External repository notice   |
-|:---------------------------|
-| This repository is now mirrored at https://github.com/gve-sw/CUCM_Jabber_Dialer_Portal  Please inform a https://github.com/gve-sw/ organization admin of any changes to mirror them to the external repo |
-
 This sample code can be used to retrieve a list of devices from Cisco Unified Communications Manager using
  the AXL Soap API and a SQL Query to also extract the extension number assigned to each device. 
 The information is then showed in a web page where the extension number is displayed as a link that triggers the Jabber Protocol Handler 
@@ -56,11 +52,8 @@ In the CLI:
 
 3.	Clone this Github repository into the virtual environment folder.
     ```python
-    git clone [add github link here]
+    git clone https://github.com/gve-sw/CUCM_Jabber_Dialer_Portal
     ```
-    For Github link: 
-        In Github, click on the **Clone or download** button in the upper part of the page > click the **copy icon**
-        ![/IMAGES/giturl.png](/STATIC/IMAGES/giturl.png)
 
 
 5.	Install dependencies
