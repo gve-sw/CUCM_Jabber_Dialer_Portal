@@ -65,8 +65,8 @@ In the CLI:
 [Cisco Collaboration 12.5 v1 - Transform Work with Collaboration](https://dcloud2-rtp.cisco.com/content/demo/578984?returnPathTitleKey=content-view)
  - Install the AXLSQLToolkit files by going into the CUCM admin page, Go to Application | Plugins. Click on the Download link by the Cisco CallManager AXL SQL Toolkit Plugin. The axlsqltoolkit.zip file contains the complete schema definition for different versions of Cisco Unified CM.
  - Make sure the user being used has a user rank of 1 or with proper API AXL permissions (Role: Standard AXL API Access Reference: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cucm/admin/9_0_1/ccmsys/CUCM_BK_CD2F83FA_00_cucm-system-guide-90/CUCM_BK_CD2F83FA_00_system-guide_chapter_0100.pdf)
- - If using the a "Transform Work with Collaboration" dCloud demo instance, copy 'dcloud_sample_env.py' to 'user_env.py'. It contains appropriate values for CUCM_LOCATION , CUCM_USER and CUCM_PASSWORD to use that demo. You still have to provide the value for WSDL_PATH depending on where you copy the 'AXLAPI.wsdl' on one of the 
-   Windows virtual machines in the demo or on your local machine (if connecting via VPN).
+ - If using the a "Transform Work with Collaboration" dCloud demo instance, copy 'dcloud_sample_env.py' to 'user_env.py'. It contains appropriate values for CUCM_LOCATION , CUCM_USER and CUCM_PASSWORD to use that demo. You still have to provide the value for WSDL_PATH depending on where you copy the 'AXLAPI.wsdl' 
+   after downloading the AXLSQLToolkit plugin to one of the Windows virtual machines in the demo or on your local machine (if connecting via VPN).
  - Otherwise, copy 'user_env.template' to 'user_env.py' and then edit 'user_env.py' and add your CUCM environment and user details WSDL_PATH = "(path to WSDL file)" CUCM_LOCATION = "(IP Address)" CUCM_USER = "(username without domain Example user: amckenzie)" CUCM_PASSWORD = "(password)"
 
 
