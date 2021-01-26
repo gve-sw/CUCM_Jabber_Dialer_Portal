@@ -32,7 +32,7 @@ SOFTWARE.
 
 # User Input
 
-WSDL_PATH = "/Users/gerardochaves/Documents/VSE local documents/0 Case notes and misc files/02978806 Collab OnPrem Integration Healthcare/CUCM_Jabber_Dialer_Portal/axlsqltoolkit/schema/current/AXLAPI.wsdl"
+WSDL_PATH = "../axlsqltoolkit/schema/current/AXLAPI.wsdl"
 CUCM_LOCATION = "198.18.133.3"
 CUCM_USER = "amckenzie"
 CUCM_PASSWORD = "dCloud12345!"
