@@ -35,6 +35,8 @@ Collaboration Room and Desk devices such as DX80s can limit the list of devices 
 This sample code can be tested using a Cisco dCloud demo instance that contains the CUCM VM such as the one titled  
 [Cisco Collaboration 12.5 v1 - Transform Work with Collaboration](https://dcloud2-rtp.cisco.com/content/demo/578984?returnPathTitleKey=content-view)
 
+It can also be tested using the [Collaboration 12.5 DevNet Sandbox](https://devnetsandbox.cisco.com/RM/Diagram/Index/803ec3d3-ab55-4c59-99d0-d3a4dd4233eb?diagramType=Topology) although that would require more configuration to be done to set up devices and install Jabber on workstations connected to the sandbox via VPN. 
+
 
 ## Installation
 
