@@ -30,6 +30,12 @@ Collaboration Room and Desk devices such as DX80s can limit the list of devices 
  - A CUCM Environment (VMs included)
  - VPN to be on the same network as CUCM 
 
+## Related Sandbox
+
+This sample code can be tested using a Cisco dCloud demo instance that contains the CUCM VM such as the one titled  
+[Cisco Collaboration 12.5 v1 - Transform Work with Collaboration](https://dcloud2-rtp.cisco.com/content/demo/578984?returnPathTitleKey=content-view)
+
+
 ## Installation
 
 It is recommended you set up a python environment as follows, assuming you do not use an IDE that does this for you already:
@@ -52,17 +58,14 @@ In the CLI:
 
 3.	Clone this Github repository into the virtual environment folder.
     ```python
-    git clone https://github.com/gve-sw/CUCM_Jabber_Dialer_Portal
+    git clone https://wwwin-github.cisco.com/gve/CUCM_Jabber_Dialer_Portal
     ```
-
 
 4.	Install dependencies
     ```python
     pip install -r requirements.txt
     ```
 
-- This sample code can be tested using a Cisco dCloud demo instance that contains the CUCM VM such as the one titled  
-[Cisco Collaboration 12.5 v1 - Transform Work with Collaboration](https://dcloud2-rtp.cisco.com/content/demo/578984?returnPathTitleKey=content-view)
  - Install the AXLSQLToolkit files by going into the CUCM admin page, Go to Application | Plugins. Click on the Download link by the Cisco CallManager AXL SQL Toolkit Plugin. The axlsqltoolkit.zip file contains the complete schema definition for different versions of Cisco Unified CM.
  - Make sure the user being used has a user rank of 1 or with proper API AXL permissions (Role: Standard AXL API Access Reference: https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cucm/admin/9_0_1/ccmsys/CUCM_BK_CD2F83FA_00_cucm-system-guide-90/CUCM_BK_CD2F83FA_00_system-guide_chapter_0100.pdf)
  - If using the a "Transform Work with Collaboration" dCloud demo instance, copy 'dcloud_sample_env.py' to 'user_env.py'. It contains appropriate values for CUCM_LOCATION , CUCM_USER and CUCM_PASSWORD to use that demo. You still have to provide the value for WSDL_PATH depending on where you copy the 'AXLAPI.wsdl' 
